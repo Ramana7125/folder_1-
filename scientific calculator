@@ -1,0 +1,37 @@
+import math
+
+def power(num1, num2):
+    return math.pow(num1, num2)
+
+def log(num1, base=10):
+    if num1 <= 0:
+        return "Error! Logarithm is defined for positive values only."
+    return math.log(num1, base)
+
+def loop():
+    while True:
+        print("\nScientific Calculator")
+        print("1. Power ")
+        print("2. Logarithm")
+        print("0. Exit")
+
+        choice = input("Enter your choice (0-2): ")
+
+        if choice == '0':
+            print("Exiting calculator")
+            break
+
+        elif choice == '1':
+            num1 = int(input("Enter first number : "))
+            num2 = int(input("Enter second number : "))
+            print("Result:", power(num1, num2))
+
+        elif choice == '2':
+            num1 = int(input("Enter positive number : "))
+            base = int(input("Enter base number : "))
+            print("Result:", log(num1, base))
+
+        else:
+            print("Invalid choice, please select between 0-2.")
+
+loop()
